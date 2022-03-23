@@ -1,14 +1,16 @@
 package funprog2;
 
-public class Accomodation {
-	int noPeople;
-	int availability;
-	int noDaysStay;
+abstract class Accomodation {
+	protected int noPeople;
+	protected int availability;
+	protected int noDaysStay;
+	protected boolean hasBBQ;
 	
-	public Accomodation(int noPeople, int availability, int noDaysStay) {
+	public Accomodation(int noPeople, int availability, int noDaysStay, boolean hasBBQ) {
 		noPeople = this.noPeople;
 		availability = this.availability;
 		noDaysStay = this.noDaysStay;
+		hasBBQ = this.hasBBQ;
 	}
 	
 	
@@ -25,7 +27,21 @@ public class Accomodation {
 		return noDaysStay;
 	}
 	
-	public String toSring() {
+	public boolean getHasBBQ() {
+		return hasBBQ;
+	}
+	
+	public void sethasBBQ(boolean hasBBQ) {
+		this.hasBBQ = hasBBQ;
+	}
+	
+	// need abstract method: has / has not BBQ.
+	// implement in children classes.
+	public boolean hasBBQ() {
+		return hasBBQ;
+	}
+	
+	public String toString() {
 		return noPeople + "\n" + availability + "\n" + noDaysStay;
 	}
 }

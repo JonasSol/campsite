@@ -1,10 +1,11 @@
 package funprog2;
 
-public class Reservation {	
-	int IDReservation;
-	int date;
+public class Reservation extends Accomodation {	
+	protected int IDReservation;
+	protected int date;
 	
-	public Reservation(int IDReservation, int date) {
+	public Reservation(int noPeople, int availability, int noDaysStay, boolean hasBBQ, int IDReservation, int date) {
+		super(noPeople, availability, noDaysStay, hasBBQ);
 		IDReservation = this.IDReservation;
 		date = this.date;
 	}
@@ -19,12 +20,13 @@ public class Reservation {
 	}
 	
 	public boolean accomodationHasBBQ() {
-		return Accomodation.HasBBQ();
+		return hasBBQ;
 	}
 		
 	public String toString() { 
-		return Accomodation.toString() + "\n" + days + "\n" + ID;
-		// This is not correct.
+		return super.toString() + "date: " + date + "IDReservation: " + IDReservation;
+		
 	}
 	
 }
+	

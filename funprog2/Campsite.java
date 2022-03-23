@@ -5,8 +5,6 @@ class Campsite {
 	protected String name;
 	protected double price;
 	
-	
-	// constructors:
 	public Campsite(int area, String name, double price) {
 		area = this.area;
 		name = this.name;
@@ -29,4 +27,5 @@ class Campsite {
 	public String toString() {
 		return area + "\n" + name + "\n" + price;
 	}
+	
 }

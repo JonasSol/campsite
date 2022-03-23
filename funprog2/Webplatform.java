@@ -13,4 +13,9 @@ public class Webplatform {
 		return percentage;
 				
 	}
+	
+	public String toString() {
+		return name + "\n" + percentage;
+	}
+	
 }

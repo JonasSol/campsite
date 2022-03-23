@@ -1,28 +1,37 @@
 package funprog2;
 
-class VIPCustomer extends Client {
-	public VIPCustomer() {
-	// legg inn variablene fra father her også tror jeg?
-		super(ID, name, creditCardNo, reservation);
+public class VIPCustomer extends Client {
+	int VIPCardNo;
+	
+	// constructor
+	public VIPCustomer(int ID, String name, int creditCardNo, int VIPCardNo) {
+		super (ID, name, creditCardNo);
 		
+		this.VIPCardNo = VIPCardNo;	
 	}
 	
-	public boolean hasBBQ() {
+	
+	public boolean hasBarbeque() {
 		return true;
 	}
 	
-	public String toString(); {
-		return super.toString() + "\n"; // I dont understand this
+	
+	public String toString() {
+		return super.toString() + "VIPCardNo: " + VIPCardNo; 
 	}
 	
 	public double calculateDiscount() {
 		double discount = 10;
-		
-		if (reservation > 1) { // operator don't work?
+		if (reservation > 1) { 
 			discount += 5;
-		return discount;
 		}
+		return discount;
 	}
-		
+	
+	// setter
+	public void setVIPCardNo(int newVIPCardNo) {
+		int VIPCardNo = newVIPCardNo;
+	}
+	
 	
 }

@@ -3,7 +3,7 @@ package funprog2;
 public class CleaningCo {
 	String name = "Limpieza y Mantenimiento S.L.";
 	float cleaningFee = 15;
-	float materialsFee = 2;
+	float materialsFee = 2;	
 	
 	
 	public CleaningCo(String name, float cleaningFee, float materialsFee) {
