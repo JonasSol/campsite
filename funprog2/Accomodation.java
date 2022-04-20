@@ -3,7 +3,7 @@ package funprog2;
 abstract class Accomodation {
 	protected int noPeople;
 	protected int availability;
-	protected int noDaysStay;
+	protected static int noDaysStay;
 	protected boolean hasBBQ;
 	
 	public Accomodation(int noPeople, int availability, int noDaysStay, boolean hasBBQ) {

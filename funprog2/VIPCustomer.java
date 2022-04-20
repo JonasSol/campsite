@@ -1,7 +1,7 @@
 package funprog2;
 
 public class VIPCustomer extends Client {
-	int VIPCardNo;
+	static int VIPCardNo;
 	
 	// constructor
 	public VIPCustomer(int ID, String name, int creditCardNo, int VIPCardNo) {

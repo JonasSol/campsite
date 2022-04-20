@@ -14,6 +14,11 @@ public class Webplatform {
 				
 	}
 	
+	public void calcWebEarnings() {
+		calcWebEarnings = (Campsite.calculatePrice() * 0.05);
+			return calcWebEarnings;
+	}
+	
 	public String toString() {
 		return name + "\n" + percentage;
 	}

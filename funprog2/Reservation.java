@@ -19,13 +19,20 @@ public class Reservation extends Accomodation {
 		date = newDate;
 	}
 	
-	public boolean accomodationHasBBQ() {
+	public boolean CabinHasBBQ() {
 		return hasBBQ;
 	}
 		
 	public String toString() { 
 		return super.toString() + "date: " + date + "IDReservation: " + IDReservation;
 		
+	}
+
+	// is this correct?
+	@Override
+	public boolean hasBBQ() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	
 }

@@ -1,10 +1,11 @@
 package funprog2;
 
 public class Client {
-	protected int ID;
+	protected static int ID;
 	protected String name;
 	protected int creditCardNo;
 	protected Reservation[] reservation = new Reservation[5];
+	static boolean doesClientExist = false;
 	
 	int noReservation; //check if more than 5.
 
@@ -31,7 +32,16 @@ public class Client {
 	}
 	
 	
-//  toString:
+	public static boolean doesClientExist() {
+		for (int i=0;i<reservation.length; i++)
+			if (i==ID) {
+				doesClientExist = true;
+			}else continue;	
+		return doesClientExist;
+		
+	}
+	
+	//  toString:
 	public String toString() {
 		return name + "\n" + ID + "\n" + creditCardNo;
 	}

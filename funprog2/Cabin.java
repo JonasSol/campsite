@@ -47,5 +47,7 @@ public class Cabin extends Accomodation{
 
 	
 	
+	
+	
 }
 
